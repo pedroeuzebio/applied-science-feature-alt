@@ -196,7 +196,7 @@ def ClassificacaoHierarquica(X_train, y_train, X_test, y_test, opcao_dataset, no
         if(op == "hierar"):
             print("precisão",precisao,"revocacao", revocacao,"f1", f1,"acuracia", acuracia,"especificidade", especificidade)
             
-            return modelosCRIC,X_test, X_test_alterada,X_test_madura,X_test_jovem, y_train_balanceado,y_train_madura_bal,y_train_alterada_bal,y_train_na_balanceado,y_train_jovem_bal
+            return modelosCRIC,X_test, X_test_alterada,X_test_madura,X_test_jovem, y_train_balanceado,y_train_madura_bal,y_train_alterada_bal,y_train_na_balanceado,y_train_jovem_bal,y_test_normal, y_predRF_madura, y_predRF_jovem
     # Herlev
     if (opcao_dataset == 7):
         X_train_balanceado, y_train_balanceado = balanceamentoOversampling(copy.deepcopy(X_train), copy.deepcopy(y_train), estrategia_oversampling)
